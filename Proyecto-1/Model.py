@@ -1,11 +1,11 @@
-##EN este proyecto almacenara los datos
+##EN este proyecto se encarga de manejar los datos, es decir listar
 
-Tareas = []
+Tareas = [] #lista 
 
-def agregar_tarea (descripcion):
+def agregar_tarea (descripcion): #define funcion
     tarea ={
-        "descripcion" : descripcion,
-        "esta_completada" : False
+        "descripcion" : descripcion, #atributo "DESCRIPCION"
+        "esta_completada" : False #atributo boolenao "FALse"
     }
     Tareas.append(tarea)
 
@@ -13,14 +13,14 @@ def Listar_tareas():
     return Tareas
 
 def Marcar_completada(index):
-    try:
-        Tareas[index]["esta completada"] = True
-    except IndexError:
-        print("!!!!!indice no valido!!!!!") 
+    try: # captura exepcion 
+        Tareas[index]["esta_completada"] = True #en la posicion #INDICE#
+    except IndexError: #exepcion tipo indexError
+        print("!!!!!indice no valido!!!!!") #imprime
 
 
 def Eliminar_tarea (index):
-    try:
-        Tareas.pop(index)
-    except IndexError:
+    try: # capturar exepcion
+        Tareas.pop(index) # con la funcion "POP" elimino la tarea dijitando el indice
+    except IndexError: #exepcion tipo IndexError
         print("!!!!indice no valido!!!!!")
